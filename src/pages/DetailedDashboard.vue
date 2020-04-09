@@ -1,0 +1,147 @@
+<template>
+    <div class="row">
+      <div class="col-lg-12 col-md-12">
+        <div class="card">
+          <h4 slot="header" class="card-title"></h4>
+          <div class="chart-area">
+            <ClusteredBar></ClusteredBar>
+          </div>
+        </div>
+      </div>
+    </div>
+</template>
+<script>
+ import ClusteredBar from 'components/Dashboard/ClusteredBar'
+export default {
+  components: {
+      ClusteredBar
+  },
+};
+</script>
+<style lang="scss">
+.card{
+    background: #27293d;
+    border: 0;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+    box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);;
+
+
+    label{
+      color: rgba(#ffffff, 0.6);
+    }
+
+    .card-title {
+      margin-bottom: .75rem;
+    }
+
+    .card-body{
+      padding: 15px;
+
+      &.table-full-width{
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .card-title{
+        color: #ffffff;
+        text-transform: inherit;
+        font-weight: 300;
+        margin-bottom: .75rem;
+      }
+
+      .card-description, .card-category{
+        color: rgba(#ffffff, 0.6);
+      }
+
+    }
+
+    .card-header{
+      &:not([data-background-color]){
+        background-color: transparent;
+      }
+      padding: 15px 15px 0;
+      border: 0;
+      color: rgba(#ffffff,0.8);
+
+      .card-title{
+          color: #ffffff;
+          font-weight: 100;
+      }
+
+      .card-category{
+        color: #9A9A9A;
+        margin-bottom: 5px;
+        font-weight: 300;
+      }
+    }
+
+    .map{
+        border-radius:  0.2857rem;
+
+        &.map-big{
+          height: 420px;
+        }
+    }
+
+    &.card-white{
+      background: #ffffff;
+
+      .card-title{
+        color: #222a42;
+      }
+      .card-category, .stats{
+        color: #808080;
+      }
+
+      //style for inputs
+    }
+
+    &.card-plain {
+      background: transparent;
+      box-shadow: none;
+    }
+
+    .image{
+        overflow: hidden;
+        height: 200px;
+        position: relative;
+    }
+
+    .avatar{
+        width: 30px;
+        height: 30px;
+        overflow: hidden;
+        border-radius: 50%;
+        margin-bottom: 15px;
+    }
+
+    label{
+        font-size: 8pt;
+        margin-bottom: 5px;
+
+    }
+
+    .card-footer{
+        background-color: transparent;
+        border: 0;
+        padding: 15px;
+
+
+        .stats{
+            i{
+                margin-right: 5px;
+                position: relative;
+
+            }
+        }
+
+        h6{
+          margin-bottom: 0;
+          padding: 7px 0;
+        }
+    }
+}
+</style>
