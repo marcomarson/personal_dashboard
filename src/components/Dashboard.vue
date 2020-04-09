@@ -1,10 +1,5 @@
 <template>
   <div>
-    <loading :active.sync="isLoading" 
-        :can-cancel="true" 
-        :on-cancel="onCancel"
-        :is-full-page="fullPage"></loading>
-
     <div class="row">
       <div class="col-12">
         <card type="chart">
@@ -118,10 +113,6 @@
   import Pie from './Dashboard/Pie';
   import Stacked from './Dashboard/Stacked';
   import config from '@/config';
-  import Loading from 'vue-loading-overlay';
-  import 'vue-loading-overlay/dist/vue-loading.css';
-  import Vue from 'vue';
-  Vue.use(Loading);
   export default {
     components: {
       LineChart,
