@@ -1,12 +1,12 @@
 <template>
     <div class="row">
       <div class="col-lg-12 col-md-12">
-        <div class="card">
+        <q-card class="card">
           <h4 slot="header" class="card-title"></h4>
           <div class="chart-area">
             <ClusteredBar></ClusteredBar>
           </div>
-        </div>
+        </q-card>
       </div>
     </div>
 </template>
