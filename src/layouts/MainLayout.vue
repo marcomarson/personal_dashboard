@@ -11,6 +11,9 @@
           </q-avatar>
           Marco Marson Dashboard
         </q-toolbar-title>
+         
+          <q-btn flat round dense icon="person" class="q-mr-xs" />
+          <q-btn flat round dense icon="settings" />
       </q-toolbar>
     </q-header>
 
@@ -30,7 +33,7 @@
           <q-avatar>
             <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
           </q-avatar>
-          Title
+          Created with love by Marco Marson
         </q-toolbar-title>
       </q-toolbar>
     </q-footer>
@@ -68,5 +71,8 @@ export default {
   z-index: 1050;
   background: #1a1e34;
 
+}
+.q-drawer{
+  background: #27293d;
 }
 </style>
