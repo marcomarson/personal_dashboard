@@ -27,16 +27,16 @@
       </fade-transition>
     </q-page-container>
 
-    <q-footer reveal elevated class="bg-grey-8 text-white">
+    <!-- <q-footer reveal elevated class="bg-grey-8 text-white">
       <q-toolbar>
         <q-toolbar-title>
-          <q-avatar>
+           <q-avatar>
             <img src="https://cdn.quasar.dev/logo/svg/quasar-logo.svg">
-          </q-avatar>
-          Created with love by Marco Marson
+          </q-avatar> 
+           Created with love by Marco Marson
         </q-toolbar-title>
       </q-toolbar>
-    </q-footer>
+    </q-footer> -->
 
   </q-layout>
 </template>
