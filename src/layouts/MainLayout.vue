@@ -1,9 +1,9 @@
 <template>
- <q-layout view="hHh lpR fFf">
+ <q-layout view="hHh Lpr lff">
 
     <q-header reveal elevated class="bg-primary text-white">
       <q-toolbar>
-        <q-btn dense flat round icon="menu" @click="left = !left" />
+        <q-btn dense flat round icon="menu" @click="drawer  = !drawer " />
 
         <q-toolbar-title>
           <q-avatar>
@@ -17,8 +17,25 @@
       </q-toolbar>
     </q-header>
 
-    <q-drawer v-model="left" side="left" elevated>
+    <q-drawer v-model="drawer " :width="200"
+        :breakpoint="500" side="left" >
       <!-- drawer content -->
+      <q-scroll-area class="fit">
+          <q-list v-for="(menuItem, index) in menuList" :key="index">
+
+            <q-item @click="drawer  = !drawer " clickable :active="menuItem.label === 'Outbox'" v-bind:to="menuItem.link" v-ripple>
+              <q-item-section avatar>
+                <q-icon :name="menuItem.icon" />
+              </q-item-section>
+              <q-item-section>
+                {{ menuItem.label }}
+              </q-item-section>
+            </q-item>
+
+           <q-separator v-if="menuItem.separator" />
+
+          </q-list>
+        </q-scroll-area>
     </q-drawer>
 
     <q-page-container>
@@ -48,7 +65,26 @@ export default {
   name: 'MainLayout',
    data () {
     return {
-      left: false
+      drawer: false,
+      menuList:[ {
+          icon: 'home',
+          label: 'Home',
+          separator: true,
+          link:"/"
+        },
+        {
+          icon: 'watch_later',
+          label: 'Mangas',
+          separator: false,
+           link:"/manga"
+        },
+        {
+          icon: 'add',
+          label: 'Insert Manga',
+          separator: false,
+          link:"/insertManga"
+        },
+      ]
     }
   },
    components: {
