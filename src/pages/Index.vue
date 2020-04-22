@@ -1,10 +1,10 @@
 <template>
   <q-page class="main">
     <div class='row'>
-      <div class=' col-md-6 col-xs-12'>
+      <div class=' col-6 col-xs-12'>
         <div>
             <img
-              alt="Quasar logo"
+              alt="Profile image"
               src="~assets/profile.jpg"
             >
             <div class='name'>
@@ -13,7 +13,7 @@
          
         </div>
       </div>
-      <div class='col-6 second-part'>
+      <div class='col-6 col-xs-12 second-part'>
         <div class='main-title'>
           <about> </about>
         </div>
@@ -35,24 +35,17 @@ export default {
 </script>
 <style lang='scss'>
 .main{
-  overflow:hidden;
-  width: auto;
   img{
-    height: 100vh;
-    // width:100vh;
+    // height: auto;
+    // width:100vw;
+    height:100vw;
   }
   .name{
     font-size: 26pt;
     position: absolute;
-    width: auto;
-    margin-top:-200px;
-    // margin-top:70vh;
-    // left:25%;
-    // margin-right:15%;
+    width:100vw;
+    margin-top:-180px;
     text-align: center;
-    h1{
-      font-size: 26pt;
-    }
   }
   
 

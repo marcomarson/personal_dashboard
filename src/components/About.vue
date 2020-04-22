@@ -27,10 +27,12 @@
                 </div>
             </div>
         <div class="profile-social row justify-center">
-            <ul class="social">
-                <li>aa<a  href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i></a></li>
-                <li><a  href="https://www.linkedin.com" target="_blank"><i class="fab fa-github"></i></a></li>
-            </ul>
+                <div class='col-2'>
+                    <a  href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
+                </div>
+                 <div class='col-2'>
+                    <a  href="https://www.github.com/marcomarson" target="_blank"><i class="fab fa-github fa-3x"></i></a>
+                </div>
         </div>
     </div>
 </template>
@@ -51,16 +53,13 @@ export default {
        font-weight: bold;
    }
    .profile-social{
-       text-align: center;
-       padding:10px;
-       width: 100%;
-       background-color: $secondary;
-       ul{
-             list-style-type: none;
-       }
-       li {
-            float: left;
+        text-align: center;
+        // margin-top:15px;
+        margin: 25px;
+        background-color: $secondary;
+     
         a {
+             padding:10px;
         display: block;
         color: white;
         text-align: center;
@@ -68,10 +67,10 @@ export default {
         text-decoration: none;
         }
         a:hover {
+            height: auto;
+            width: auto;
             background-color: #111111;
         }
-    }
-
    }
 }
 </style>
